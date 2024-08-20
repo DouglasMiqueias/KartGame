@@ -193,7 +193,7 @@ programa {
 			se(reservado == 0 e cadastroCircuito==1){
 				escreva("Reserva feita com sucesso!\n")
 				u.aguarde(1000)
-				valorCircuito = valorCircuito + (0.70*valorCircuito)
+				valorCircuito = valorCircuito + 0.70 //CORREÇÃO
 				reservado = 1
 			}senao{
 				escreva("O circuito já está reservado e, por isso, não pode ser alugado no momento.\n")
