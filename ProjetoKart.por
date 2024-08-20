@@ -1,6 +1,6 @@
 programa {
 	inclua biblioteca Util --> u
-	
+	//
 	funcao cadastrarKart(inteiro &qtdTotal, cadeia &modelo[], real &valor[], inteiro &qtdLocado[], real &valorAcumulado[], inteiro &disponivel[]){
 		cadeia nome
 		real valorIndividual
