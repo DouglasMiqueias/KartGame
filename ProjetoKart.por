@@ -180,7 +180,8 @@ programa {
 
 	funcao alugarCircuito(inteiro &reservado, real &valorCircuito, inteiro &cadastroCircuito){
 		real preco= 0.0, lucroPista= 0.0
-		inteiro choice=0
+		
+		inteiro choice=0, qtdCircuitoLocado=0
 		se (cadastroCircuito==0){
 			escreva ("Insira o valor que você deseja cobrar pela locação do circuito: \n")
 			leia (preco)
@@ -192,8 +193,9 @@ programa {
 		se (choice==1){
 			se(reservado == 0 e cadastroCircuito==1){
 				escreva("Reserva feita com sucesso!\n")
+				qtdCircuitoLocado++
 				u.aguarde(1000)
-				valorCircuito = valorCircuito + (0.70*valorCircuito)
+				valorCircuito = (valorCircuito * 0.7) * qtdCircuitoLocado
 				reservado = 1
 			}senao{
 				escreva("O circuito já está reservado e, por isso, não pode ser alugado no momento.\n")
